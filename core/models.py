@@ -26,10 +26,6 @@ class Post(TimeAuditModel):
     feedback = JSONField(null=True)
     post_author = models.CharField(max_length=255)
 
-    # post_author = models.ForeignKey(
-    #     User, related_name="created_by_users", on_delete=models.SET_NULL, null=True
-    # )
-
     def __str__(self):
         return self.post_title
 
