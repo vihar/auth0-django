@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
+from dotenv import load_dotenv
 
+project_folder = os.path.expanduser('/Users/viharkurama/Desktop/Articles/Auth0/codeshare-2')  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, '.env'))
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,11 +35,7 @@ ALLOWED_HOSTS = ["*"]
 SITE_ID = 1
 
 SOCIAL_AUTH_TRAILING_SLASH = False  # Remove trailing slash from routes
-SOCIAL_AUTH_AUTH0_DOMAIN = "dev-flld1fzu.auth0.com"
-SOCIAL_AUTH_AUTH0_KEY = "4GFBP0Ij5wfpUYEkZGaHOFvtsDPz3dEx"
-SOCIAL_AUTH_AUTH0_SECRET = (
-    "CPvUt76S6Yt9r5pnxoV8QLn7Mq4Y6lwR_2LzbusW0dKNPwnPPxzlC9F7vBWWhNLs"
-)
+e
 
 SOCIAL_AUTH_AUTH0_SCOPE = ["openid", "profile", "email"]
 # Application definition
